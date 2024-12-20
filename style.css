@@ -35,6 +35,12 @@ audio {
   margin-left: 165px;
 }
 
+
+td audio {
+  width: 300px;
+  margin-left: 0px;
+}
+
 .scores h1 {
   color: white !important;
   text-align: center;
