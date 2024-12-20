@@ -1,0 +1,45 @@
+h1 {
+  color: #585869 !important;
+  font-weight: 900 !important;
+}
+
+.round h1 {
+  color: #C72C2C !important;
+  text-align: center;
+}
+
+.question h1, .question h2 {
+  color: #C72C2C !important;
+  text-align: center;
+  font-size: 22pt !important;
+}
+
+.question p, .round p, .question li {
+  font-family: Lora;
+  text-align: center;
+}
+
+td {
+  vertical-align: top;
+  border-bottom: 0px !important;
+  font-family: Lora !important;
+}
+
+.recap p, .recap li {
+  font-size: 14pt;
+  text-align: left;
+}
+
+.video-js {
+  width: 720px;
+  margin-left: 165px;
+}
+
+.scores h1 {
+  color: white !important;
+  text-align: center;
+}
+
+.scores td, .scores th {
+  color: white !important;
+}
