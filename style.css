@@ -49,3 +49,7 @@ td audio {
 .scores td, .scores th {
   color: white !important;
 }
+
+img {
+  margin: auto;
+}

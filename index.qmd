@@ -10,97 +10,56 @@ format:
     css: style.css
 ---
 
-```{r}
+```{r setup}
 library(readxl)
 library(dplyr)
 library(huxtable)
+library(htmltools)
+
+source("functions.R")
 
 scores <- read_xlsx("scores.xlsx", sheet = "Scores")
+quiz <- read.csv("quiz.csv", quote = "\'")
 ```
 
 # CHRISTMAS FOOD & DRINK {.round background-image="img/round-1-background.png"}
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 
-In which European country are _"capitone"_ (or roasted eels) commonly eaten on Christmas Eve?
-
-![](img/capitone.webp){fig-align="center"}
+`r print_question(1, 1)`
 
 # QUESTION 2 {.question background-image="img/question-background.png"}
 
-_Baileys Irish Cream_ is a popular tipple at  Christmas time. It is made by emulsifying cream with what spirit?
-
-![](img/baileys.webp){fig-align="center"}
+`r print_question(1, 2)`
 
 # QUESTION 3 {.question background-image="img/question-background.png"}
 
-In Germany, what foodstuff is traditionally hidden somewhere inside the Christmas tree, with the lucky finder receiving an extra Christmas present?
-
-![](img/Christmas-Tree.jpg){fig-align="center"}
+`r print_question(1, 3)`
 
 # QUESTION 4 {.question background-image="img/question-background.png"}
 
-Which was the first to be removed from the standard tin of _Celebrations_?
-
-![](img/celebrations.webp){fig-align="center"}
-
-. . .
-
-Topic _or_ Galaxy Truffle?
+`r print_question(1, 4)`
 
 # QUESTION 5 {.question background-image="img/question-background.png"}
 
-According to a _YouGov_ poll 77% 6-10 year olds leave out a carrot for Santa's reindeer, but at 64% what is the popular food left out for Santa?
-
-![](img/santa-drink.png){fig-align="center"}
+`r print_question(1, 5)`
 
 # QUESTION 6 {.question background-image="img/question-background.png"}
 
-In her famous recipe, what liquid does Nigella Lawson boil the Christmas ham in?
-
-![](img/nigella.jpg){fig-align="center"}
+`r print_question(1, 6)`
 
 # QUESTION 7 {.question background-image="img/question-background.png"}
 
-In the 1994 remake of _Miracle on 34th Street_ Dorey Walker returns home from working at Cole's Department Store to find that her dreamboat of a neighbour, Bryan Bedford, has prepared a full turkey dinner.
+`r print_question(1, 7)`
 
-![](img/dinner-miracle-34th.jpg){fig-align="center"}
-
-. . .
-
-But which 90s heartthrob plays Bryan Bedford?
-
-Dylan McDermott _or_ Dermot Mulroney?
 
 # QUESTION 8 {.question background-image="img/question-background.png"}
 
-In the 2005, Christmas family comedy _The Family Stone_ Sarah Jessica Parker's character Meredith memorably ruins a Holiday Strata when she trips in her stilettos and drops the entire dish
-
-![](img/strata.jpeg){fig-align="center"}
-
-. . .
-
-but which Hollywood hunk plays Meredith's boyfriend Everett Stone in _The Family Stone_?
-
-Dylan McDermott _or_ Dermot Mulroney?
+`r print_question(1, 8)`
 
 # CHRISTMAS FOOD & DRINK - RECAP {.question .recap background-image="img/question-background.png"}
 
-1. In which European country are _"capitone"_ (or roasted eels) commonly eaten on Christmas Eve?
-
-2. _Baileys Irish Cream_ is a popular tipple at  Christmas time. It is made by emulsifying cream with what spirit?
-
-3. In Germany, what foodstuff is traditionally hidden somewhere inside the Christmas tree, with the lucky finder receiving an extra Christmas present?
-
-4. Which was the first to be removed from the standard tin of _Celebrations_? Topic _or_ Galaxy Truffle?
-
-5. According to a _YouGov_ poll 77% 6-10 year olds leave out a carrot for Santa's reindeer, but at 64% what is the popular food left out for Santa?
-
-6. In her famous recipe, what liquid does Nigella Lawson boil the Christmas ham in?
-
-7. In the 1994 remake of _Miracle on 34th Street_ Dorey Walker returns home from working at Cole's Department Store to find that her dreamboat of a neighbour, Bryan Bedford, has prepared a full turkey dinner. But which 90s heartthrob plays Bryan Bedford? Dylan McDermott _or_ Dermot Mulroney?
-
-8. In the 2005, Christmas family comedy _The Family Stone_ Sarah Jessica Parker's character Meredith memorably ruins a Holiday Strata when she trips in her stilettos and drops the entire dish but which Hollywood hunk plays Meredith's boyfriend Everett Stone in _The Family Stone_? Dylan McDermott _or_ Dermot Mulroney?
+`r recap_round(1)`
 
 # CHRISTMAS FOOD & DRINK {.round background-image="img/round-1-background.png"}
 
@@ -108,109 +67,67 @@ ANSWERS
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 
-In which European country are _"capitone"_ (or roasted eels) commonly eaten on Christmas Eve?
-
-![](img/capitone.webp){fig-align="center"}
+`r print_question(1, 1)`
 
 ## QUESTION 1 {.question background-image="img/question-background.png"}
 
-Italy
-
-![](img/eel.jpg){fig-align="center"}
+`r print_answer(1 ,1)`
 
 # QUESTION 2 {.question background-image="img/question-background.png"}
 
-_Baileys Irish Cream_ is a popular tipple at  Christmas time. It is made by emulsifying cream with what spirit?
-
-![](img/baileys.webp){fig-align="center"}
+`r print_question(1, 2)`
 
 ## QUESTION 2 {.question background-image="img/question-background.png"}
 
-Irish whiskey
-
-![](img/irish-whiskeys.jpg){fig-align="center"}
+`r print_answer(1, 2)`
 
 # QUESTION 3 {.question background-image="img/question-background.png"}
 
-In Germany, what foodstuff is traditionally hidden somewhere inside the Christmas tree, with the lucky finder receiving an extra Christmas present?
-
-![](img/Christmas-Tree.jpg){fig-align="center"}
+`r print_question(1, 3)`
 
 ## QUESTION 3 {.question background-image="img/question-background.png"}
 
-![](img/christmas-pickle.jpg){fig-align="center"}
-
-A pickle
+`r print_answer(1, 3)`
 
 # QUESTION 4 {.question background-image="img/question-background.png"}
 
-Which was the first to be removed from the standard tin of _Celebrations_?
-
-![](img/celebrations.webp){fig-align="center"}
-
-Topic _or_ Galaxy Truffle?
+`r print_question(1, 4)`
 
 ## QUESTION 4 {.question background-image="img/question-background.png"}
 
-![](img/topic.png){fig-align="center"}
-
-Topic _(in 2006)_
+`r print_answer(1, 4)`
 
 # QUESTION 5 {.question background-image="img/question-background.png"}
 
-According to a _YouGov_ poll 77% 6-10 year olds leave out a carrot for Santa's reindeer, but at 64% what is the popular food left out for Santa?
-
-![](img/santa-drink.png){fig-align="center"}
+`r print_question(1, 5)`
 
 ## QUESTION 5 {.question background-image="img/question-background.png"}
 
-![](img/yougov.png){fig-align="center"}
-
-Mince pie
+`r print_answer(1, 5)`
 
 # QUESTION 6 {.question background-image="img/question-background.png"}
 
-In her famous recipe, what liquid does Nigella Lawson boil the Christmas ham in?
-
-![](img/nigella.jpg){fig-align="center"}
+`r print_question(1, 6)`
 
 ## QUESTION 6 {.question background-image="img/question-background.png"}
 
-![](img/Coca-Cola-Ham.jpg){fig-align="center"}
-
-Coca-Cola
+`r print_answer(1, 6)`
 
 # QUESTION 7 {.question background-image="img/question-background.png"}
 
-In the 1994 remake of _Miracle on 34th Street_ Dorey Walker returns home from working at Cole's Department Store to find that her dreamboat of a neighbour, Bryan Bedford, has prepared a full turkey dinner.
-
-![](img/dinner-miracle-34th.jpg){fig-align="center"}
-
-But which 90s heartthrob plays Bryan Bedford?
-
-Dylan McDermott _or_ Dermot Mulroney?
+`r print_question(1, 7)`
 
 ## QUESTION 7 {.question background-image="img/question-background.png"}
 
-![](img/mcdermott.webp){fig-align="center"}
-
-Dylan McDermott
+`r print_answer(1, 7)`
 
 # QUESTION 8 {.question background-image="img/question-background.png"}
 
-In the 2005, Christmas family comedy _The Family Stone_ Sarah Jessica Parker's character Meredith memorably ruins a Holiday Strata when she trips in her stilettos and drops the entire dish
-
-![](img/strata.jpeg){fig-align="center"}
-
-but which Hollywood hunk plays Meredith's boyfriend Everett Stone in _The Family Stone_?
-
-Dylan McDermott _or_ Dermot Mulroney?
+`r print_question(1, 8)`
 
 ## QUESTION 8 {.question background-image="img/question-background.png"}
 
-![](img/mulroney.jpg){fig-align="center" width="400"}
-
-Dermot Mulroney
+`r print_answer(1, 8)`
 
 # SCORES {.scores background-image="img/scores-background.png"}
 
@@ -226,35 +143,35 @@ scores %>%
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_1.jpg){fig-align="center" width="400"}
+`r print_question(2, 1)`
 
 # QUESTION 2 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_2.jpg){fig-align="center" width="400"}
+`r print_question(2, 2)`
 
 # QUESTION 3 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_3.jpg){fig-align="center" width="400"}
+`r print_question(2, 3)`
 
 # QUESTION 4 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_4.jpg){fig-align="center" width="400"}
+`r print_question(2, 4)`
 
 # QUESTION 5 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_5.jpg){fig-align="center" width="400"}
+`r print_question(2, 5)`
 
 # QUESTION 6 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_6.jpg){fig-align="center" width="400"}
+`r print_question(2, 6)`
 
 # QUESTION 7 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_7.jpg){fig-align="center" width="400"}
+`r print_question(2, 7)`
 
 # QUESTION 8 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_8.jpg){fig-align="center" width="400"}
+`r print_question(2, 8)`
 
 # CHRISTMAS MOVIES - RECAP {.question background-image="img/question-background.png"}
 
@@ -270,67 +187,67 @@ ANSWERS
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_1.jpg){fig-align="center" width="400"}
+`r print_question(2, 1)`
 
 ## QUESTION 1 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/answer_1.jpg){fig-align="center" width="400"}
+`r print_answer(2, 1)`
 
 # QUESTION 2 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_2.jpg){fig-align="center" width="400"}
+`r print_question(2, 2)`
 
 ## QUESTION 2 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/answer_2.jpg){fig-align="center" width="400"}
+`r print_answer(2, 2)`
 
 # QUESTION 3 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_3.jpg){fig-align="center" width="400"}
+`r print_question(2, 3)`
 
 ## QUESTION 3 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/answer_3.jpg){fig-align="center" width="400"}
+`r print_answer(2, 3)`
 
 # QUESTION 4 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_4.jpg){fig-align="center" width="400"}
+`r print_question(2, 4)`
 
 ## QUESTION 4 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/answer_4.jpg){fig-align="center" width="400"}
+`r print_answer(2, 4)`
 
 # QUESTION 5 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_5.jpg){fig-align="center" width="400"}
+`r print_question(2, 5)`
 
 ## QUESTION 5 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/answer_5.jpg){fig-align="center" width="400"}
+`r print_answer(2, 5)`
 
 # QUESTION 6 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_6.jpg){fig-align="center" width="400"}
+`r print_question(2, 6)`
 
 ## QUESTION 6 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/answer_6.jpg){fig-align="center" width="400"}
+`r print_answer(2, 6)`
 
 # QUESTION 7 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_7.jpg){fig-align="center" width="400"}
+`r print_question(2, 7)`
 
 ## QUESTION 7 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/answer_7.jpg){fig-align="center" width="400"}
+`r print_answer(2, 7)`
 
 # QUESTION 8 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/question_8.jpg){fig-align="center" width="400"}
+`r print_question(2, 8)`
 
 ## QUESTION 8 {.question background-image="img/question-background.png"}
 
-![](img/picture_round/answer_8.jpg){fig-align="center" width="400"}
+`r print_answer(2, 8)`
 
 # SCORES {.scores background-image="img/scores-background.png"}
 
@@ -346,170 +263,82 @@ scores %>%
 # 2024 {.round background-image="img/round-3-background.png"}
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
-
-Born in a Thai zoo on 10th July, what sort of creature is Moo Deng, the baby animal that became a popular meme around the world?
-
-![](img/thai-zoo.jpg){fig-align="center" width="400"}
+`r print_question(3, 1)`
 
 # QUESTION 2 {.question background-image="img/question-background.png"}
-
-What was the stage name of the Australian break dancer who, despite achieving widespread fame, didn't manage to score a single point in the Olympic breaking competition?
-
-![](img/raygun.jpg){fig-align="center" width="400"}
+`r print_question(3, 2)`
 
 # QUESTION 3 {.question background-image="img/question-background.png"}
-
-In which UK city could punters pay £35 a ticket for an immersive _Willy Wonka_ experience where they were treated to one bouncy castle, no chocolate, a single Oompa Loompa, and the _The Unknown_, a creepy new villain who "lives in the walls"?
-
-![](img/willy-wonka.jpg){fig-align="center" width="400"}
+`r print_question(3, 3)`
 
 # QUESTION 4 {.question background-image="img/question-background.png"}
-
-The Drake and Kendrick Lamar feud saw both sides furiously releasing diss tracks aimed at one another. But which of the two has been announced as the headline act for next year's Super Bowl half time show?
-
-![](img/drake-kendrick.webp){fig-align="center" width="400"}
+`r print_question(3, 4)`
 
 # QUESTION 5 {.question background-image="img/question-background.png"}
-
-Local TikToker Danielle Walsh _(@danniwalsh123)_ had a video removed from the platform by the Advertising Standards Agency after she posted herself downing how many VK cocktails in 90 seconds?
-
-![](img/danielle-walsh.webp){fig-align="center" width="400"}
+`r print_question(3, 5)`
 
 # QUESTION 6 {.question background-image="img/question-background.png"}
-
-Who became the new Ulster Unionist Party leader on 28th September, following the resignation of Doug Beattie earlier in the year?
-
-![](img/beattie.avif){fig-align="center"}
+`r print_question(3, 6)`
 
 # QUESTION 7 {.question background-image="img/question-background.png"}
-
-The Northern Ireland Executive was restored on 3rd February this year. Why was SDLP MLA Justin McNulty suspended by his party on that very same day?
-
-![](img/mcnulty.avif){fig-align="center"}
+`r print_question(3, 7)`
 
 # QUESTION 8 {.question background-image="img/question-background.png"}
-
-Which 2024 film saw Demi Moore play a fading celebrity who takes a black-market drug that temporarily creates a younger, better version of herself, played by Margaret Qualley?
-
-![](img/moore.jpg){fig-align="center"}
+`r print_question(3, 8)`
 
 # 2024 - RECAP {.question .recap background-image="img/question-background.png"}
-
-1. Born in a Thai zoo on 10th July, what sort of creature is Moo Deng, the baby animal that became a popular meme around the world?
-
-2. What was the stage name of the Australian break dancer who, despite achieving widespread fame, didn't manage to score a single point in the Olympic breaking competition?
-
-3. In which UK city could punters pay £35 a ticket for an immersive Willy Wonka experience where they were treated to one bouncy castle, no chocolate, a single Oompa Loompa, and the _The Unknown_, a creepy new villain who "lives in the walls"?
-
-4. The Drake and Kendrick Lamar feud saw both sides furiously releasing diss tracks aimed at one another. But which of the two has been announced as the headline act for next year's Super Bowl half time show?
-
-5. Local TikToker Danielle Walsh _(@danniwalsh123)_ had a video removed from the platform by the Advertising Standards Agency after she posted herself downing how many VK cocktails in 90 seconds?
-
-6. Who became the new Ulster Unionist Party leader on 28th September, following the resignation of Doug Beattie earlier in the year?
-
-7. The Northern Ireland Executive was restored on 3rd February this year. Why was SDLP MLA Justin McNulty suspended by his party on that very same day?
-
-8. Which 2024 had Demi Moore play a fading celebrity who takes a black-market drug that temporarily creates a younger, better version of herself, played by Margaret Qualley?
+`r recap_round(3)`
 
 # 2024 {.round background-image="img/round-3-background.png"}
-
 ANSWERS
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
-
-Born in a Thai zoo on 10th July, what sort of creature is Moo Deng, the baby animal that became a popular meme around the world?
-
-![](img/thai-zoo.jpg){fig-align="center" width="400"}
+`r print_question(3, 1)`
 
 ## QUESTION 1 {.question background-image="img/question-background.png"}
-
-![](img/moo-deng.jpg){fig-align="center" width="400"}
-
-Pygmy Hippopotamus
+`r print_answer(3, 1)`
 
 # QUESTION 2 {.question background-image="img/question-background.png"}
-
-What was the stage name of the Australian break dancer who, despite achieving widespread fame, didn't manage to score a single point in the Olympic breaking competition?
-
-![](img/raygun.jpg){fig-align="center" width="400"}
+`r print_question(3, 2)`
 
 ## QUESTION 2 {.question background-image="img/question-background.png"}
-
-![](img/raygun-2.webp){fig-align="center" width="400"}
-
-Raygun
+`r print_answer(3, 2)`
 
 # QUESTION 3 {.question background-image="img/question-background.png"}
-
-In which UK city could punters pay £35 a ticket for an immersive _Willy Wonka_ experience where they were treated to one bouncy castle, no chocolate, a single Oompa Loompa, and the _The Unknown_, a creepy new villain who "lives in the walls"?
-
-![](img/willy-wonka.jpg){fig-align="center" width="400"}
+`r print_question(3, 3)`
 
 ## QUESTION 3 {.question background-image="img/question-background.png"}
-
-![](img/oompa.webp){fig-align="center" width="400"}
-
-Glasgow
+`r print_answer(3, 3)`
 
 # QUESTION 4 {.question background-image="img/question-background.png"}
-
-The Drake and Kendrick Lamar feud saw both sides furiously releasing diss tracks aimed at one another. But which of the two has been announced as the headline act for next year's Super Bowl half time show?
-
-![](img/drake-kendrick.webp){fig-align="center" width="400"}
+`r print_question(3, 4)`
 
 ## QUESTION 4 {.question background-image="img/question-background.png"}
-
-![](img/kendrick.webp){fig-align="center" width="400"}
-
-Kendrick Lamar
+`r print_answer(3, 4)`
 
 # QUESTION 5 {.question background-image="img/question-background.png"}
-
-Local TikToker Danielle Walsh _(@danniwalsh123)_ had a video removed from the platform by the Advertising Standards Agency after she posted herself downing how many VK cocktails in 90 seconds?
-
-![](img/danielle-walsh.webp){fig-align="center" width="400"}
+`r print_question(3, 5)`
 
 ## QUESTION 5 {.question background-image="img/question-background.png"}
-
-![](img/vk.webp){fig-align="center" width="400"}
-
-Four VK Cocktails
+`r print_answer(3, 5)`
 
 # QUESTION 6 {.question background-image="img/question-background.png"}
-
-Who became the new Ulster Unionist Party leader on 28th September, following the resignation of Doug Beattie earlier in the year?
-
-![](img/beattie.avif){fig-align="center"}
+`r print_question(3, 6)`
 
 ## QUESTION 6 {.question background-image="img/question-background.png"}
-
-![](img/nesbitt.jpg){fig-align="center"}
-
-Mike Nesbitt
+`r print_answer(3, 6)`
 
 # QUESTION 7 {.question background-image="img/question-background.png"}
-
-The Northern Ireland Executive was restored on 3rd February this year. Why was SDLP MLA Justin McNulty suspended by his party on that very same day?
-
-![](img/mcnulty.avif){fig-align="center"}
+`r print_question(3, 7)`
 
 ## QUESTION 7 {.question background-image="img/question-background.png"}
-
-![](img/mcnulty.webp){fig-align="center"}
-
-He left the Assembly early to manage the Laois GAA team in their game against Wexford
+`r print_answer(3, 7)`
 
 # QUESTION 8 {.question background-image="img/question-background.png"}
-
-Which 2024 film saw Demi Moore play a fading celebrity who takes a black-market drug that temporarily creates a younger, better version of herself, played by Margaret Qualley?
-
-![](img/moore.jpg){fig-align="center"}
+`r print_question(3, 8)`
 
 ## QUESTION 8 {.question background-image="img/question-background.png"}
-
-![](img/substance.jpeg){fig-align="center"}
-
-_The Substance_
+`r print_answer(3, 8)`
 
 # SCORES {.scores background-image="img/scores-background.png"}
 
@@ -520,41 +349,42 @@ scores %>%
   arrange(desc(Score)) %>% 
   huxtable() %>% 
     set_bold(1:nrow(.), 2)
+
 ```
 
 # CHRISTMAS NUMBER ONES {.round background-image="img/round-4-background.png"}
 
 # SONG #1 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_1.mp3" controls>
+`r music_question(1)`
 
 # SONG #2 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_2.mp3" controls>
+`r music_question(2)`
 
 # SONG #3 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_3.mp3" controls>
+`r music_question(3)`
 
 # SONG #4 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_4.mp3" controls>
+`r music_question(4)`
 
 # SONG #5 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_5.mp3" controls>
+`r music_question(5)`
 
 # SONG #6 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_6.mp3" controls>
+`r music_question(6)`
 
 # SONG #7 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_7.mp3" controls>
+`r music_question(7)`
 
 # SONG #8 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_8.mp3" controls>
+`r music_question(8)`
 
 # CHRISTMAS NUMBER ONES - RECAP {.question .recap background-image="img/question-background.png"}
 
@@ -590,115 +420,67 @@ ANSWERS
 
 # SONG #1 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_1.mp3" controls>
+`r music_question(1)`
 
 ## SONG #1 {.question background-image="img/question-background.png"}
 
-![](img/mad-world.jpg){fig-align="center" width="400"}
-
-_Mad World_
-
-Michael Andrews and Gary Jules
-
-2003
+`r print_answer(4, 1)`
 
 # SONG #2 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_2.mp3" controls>
+`r music_question(2)`
 
 ## SONG #2 {.question background-image="img/question-background.png"}
 
-![](img/always-on-my-mind.jpg){fig-align="center" width="400"}
-
-_Always on My Mind_
-
-Pet Shop Boys
-
-1987
+`r print_answer(4, 2)`
 
 # SONG #3 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_3.mp3" controls>
+`r music_question(3)`
 
 ## SONG #3 {.question background-image="img/question-background.png"}
 
-![](img/girls-aloud.jpg){fig-align="center" width="400"}
-
-_Sound of the Underground_
-
-Girls Aloud
-
-2002
+`r print_answer(4, 3)`
 
 # SONG #4 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_4.mp3" controls>
+`r music_question(4)`
 
 ## SONG #4 {.question background-image="img/question-background.png"}
 
-![](img/only-you.jpg){fig-align="center" width="400"}
-
-_Only You_
-
-The Flying Pickets
-
-1983
+`r print_answer(4, 4)`
 
 # SONG #5 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_5.mp3" controls>
+`r music_question(5)`
 
 ## SONG #5 {.question background-image="img/question-background.png"}
 
-![](img/ratm.jpg){fig-align="center" width="400"}
-
-_Killing in the Name_
-
-Rage Against the Machine
-
-2009
+`r print_answer(4, 5)`
 
 # SONG #6 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_6.mp3" controls>
+`r music_question(6)`
 
 ## SONG #6 {.question background-image="img/question-background.png"}
 
-![](img/mud.webp){fig-align="center" width="400"}
-
-_Lonely This Christmas_
-
-Mud
-
-1974
+`r print_answer(4, 6)`
 
 # SONG #7 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_7.mp3" controls>
+`r music_question(7)`
 
 ## SONG #7 {.question background-image="img/question-background.png"}
 
-![](img/mr-blobby.jpg){fig-align="center" width="400"}
-
-_Mr Blobby_
-
-Mr Blobby
-
-1993
+`r print_answer(4, 7)`
 
 # SONG #8 {.question background-image="img/question-background.png"}
 
-<audio src="music/question_8.mp3" controls>
+`r music_question(8)`
 
 ## SONG #8 {.question background-image="img/question-background.png"}
 
-![](img/earth-song.jpg){fig-align="center" width="400"}
-
-_Earth Song_
-
-Michael Jackson
-
-1995
+`r print_answer(4, 8)`
 
 # SCORES {.scores background-image="img/scores-background.png"}
 
@@ -715,115 +497,55 @@ scores %>%
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 
-On Christmas Eve 1818, **one day** before Christmas, the first performance of which Christmas Carol took place in a church in Salzburg?
-
-![](img/Stnikola.jpg){fig-align="center" width="400"}
+`r print_question(5, 1)`
 
 # QUESTION 2 {.question background-image="img/question-background.png"}
 
-__Two days__ after Christmas Day, on the 27th December 1995 actor Timothée Chalamet arrived into this world. Which folk singer does the boy play in _A Complete Unknown_, released in UK cinemas next month?
-
-![](img/chalamet.jpg){fig-align="center" width="400"}
+`r print_question(5, 2)`
 
 # QUESTION 3 {.question background-image="img/question-background.png"}
 
-*Waiting for Godot* writer Samuel Beckett died **three days** before Christmas Day on 22nd December 1989. While living in France, which former WWF Champion did Beckett used to drive to school in his Citroën convertible?
-
-+--------------------------+----------------------+
-| a\) André the Giant      | ![](img/beckett.jpg) |
-|                          |                      |
-| b\) Hulk Hogan           |                      |
-|                          |                      |
-| c\) The Ultimate Warrior |                      |
-+--------------------------+----------------------+
+`r print_question(5, 3)`
 
 # QUESTION 4 {.question background-image="img/question-background.png"}
 
-Avant-garde rocker Frank Zappa was born __four days__ before Christmas on the 21st December 1940. Which of the following is _not_ the name of one of his children?
-
-![](img/zappa.jpg){fig-align="center" width="400"}
-
-. . .
-
-a\) Dweezil; b) Moon Unit; _or_ c) Tiger Lily
+`r print_question(5, 4)`
 
 # QUESTION 5 {.question background-image="img/question-background.png"}
 
-He died of a heroin overdose in a Las Vegas hotel room __five days__ after Christmas day on the 30th December 1970, but what is the name of the boxer who Muhammad Ali defeated for his first boxing world title?
-
-![](img/ali.jpg){fig-align="center" width="400"}
+`r print_question(5, 5)`
 
 # QUESTION 6 {.question background-image="img/question-background.png"}
 
-__Six days__ after Christmas, on the 31st December 1995, the last edition of which comic strip about a boy and his imaginary tiger was published?
-
-![](img/life-of-pi.png){fig-align="center" width="400"}
+`r print_question(5, 6)`
 
 # QUESTION 7 {.question background-image="img/question-background.png"}
 
-Who won the 2022 FIFA Men's World Cup final, beating France 4-2 on penalties held just __seven days__ before Christmas on the 18th December?
-
-![](img/qatar-world-cup-emblem.jpg){fig-align="center" width="400"}
+`r print_question(5, 7)`
 
 # QUESTION 8 {.question background-image="img/question-background.png"}
 
-On 2 January 2007, __eight days__ after Christmas day, which language became the 23rd Official Language of the EU?
-
-![](img/eu-flag.jpg){fig-align="center" width="400"}
+`r print_question(5, 8)`
 
 # QUESTION 9 {.question background-image="img/question-background.png"}
 
-What is the name of the English illustrator, best known for his work with Roald Dahl, born __nine days__ before Christmas on 16th December 1932?
-
-![](img/willy-wonka.png){fig-align="center" width="400"}
+`r print_question(5, 9)`
 
 # QUESTION 10 {.question background-image="img/question-background.png"}
 
-__Ten days__ before Christmas Day on 15th December 1993, the Downing Street Declaration was issued by which British Prime Minister _and_ which Irish Taoiseach?
-
-![](img/10_Downing_Street.jpg){fig-align="center" width="400"}
+`r print_question(5, 10)`
 
 # QUESTION 11 {.question background-image="img/question-background.png"}
 
-What is the name of the singer, actor and US Congressman, who died __eleven days__ after Christmas Day on 5th January 1998 after he skied into a tree?
-
-![](img/United_States_Capitol_west_front_edit2.jpg){fig-align="center" width="400"}
+`r print_question(5, 11)`
 
 # QUESTION 12 {.question background-image="img/question-background.png"}
 
-On December 13 1989, baby Taylor Alison Swift was born in West Reading, Pennsylvania... 
-
-![](img/taylor.jpg){fig-align="center" width="400"}
-
-. . .
-
-But just **twelve days** later, which Romanian President was executed by firing squad on Christmas Day 1989?
+`r print_question(5, 12)`
 
 # 12 DAYS OF CHRISTMAS - RECAP {.question .recap background-image="img/question-background.png"}
 
-1. On Christmas Eve 1818, **one day** before Christmas, the first performance of which Christmas Carol took place in a church in Salzburg?
-
-2. __Two days__ after Christmas Day, on the 27th December 1995 actor Timothée Chalamet arrived into this world. Which folk singer does the boy play in _A Complete Unknown_, released in UK cinemas next month?
-
-3. _Waiting for Godot_ writer Samuel Beckett died __three days__ before Christmas Day on 22nd December 1989. While living in France, which former WWF Champion did Beckett used to drive to school in his Citroën convertible? a) André the Giant; b) Hulk Hogan; _or_ c) The Ultimate Warrior?
-
-4. Avant-garde rocker Frank Zappa was born __four days__ before Christmas on the 21st December 1940. Which of the following is _not_ the name of one of his children? a) Dweezil; b) Moon Unit; _or_ c) Tiger Lily?
-
-5. He died of a heroin overdose in a Las Vegas hotel room __five days__ after Christmas day on the 30th December 1970, but what is the name of the boxer who Muhammad Ali defeated for his first boxing world title?
-
-6. __Six days__ after Christmas, on the 31st December 1995, the last edition of which comic strip about a boy and his imaginary tiger was published?
-
-7. Who won the 2022 FIFA Men's World Cup final, beating France 4-2 on penalties held just __seven days__ before Christmas on the 18th December?
-
-8. On 2 January 2007, __eight days__ after Christmas day, which language became the 23rd Official Language of the EU?
-
-9. What is the name of the English illustrator, best known for his work with Roald Dahl, born __nine days__ before Christmas on 16th December 1932?
-
-10. __Ten days__ before Christmas Day on 15th December 1993, the Downing Street Declaration was issued by which British Prime Minister _and_ which Irish Taoiseach?
-
-11. What is the name of the singer, actor and US Congressman, who died __eleven days__ after Christmas Day on 5th January 1998 after he skied into a tree?
-
-12. On December 13 1989, baby Taylor Alison Swift was born in West Reading, Pennsylvania. But just **twelve days** later, which Romanian President was executed by firing squad on Christmas Day 1989? 
+`r recap_round(5)`
 
 # 12 DAYS OF CHRISTMAS {.round background-image="img/round-5-background.png"}
 
@@ -831,157 +553,99 @@ ANSWERS
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 
-On Christmas Eve 1818, **one day** before Christmas, the first performance of which Christmas Carol took place in a church in Salzburg?
-
-![](img/Stnikola.jpg){fig-align="center" width="400"}
+`r print_question(5, 1)`
 
 ## QUESTION 1 {.question background-image="img/question-background.png"}
 
-Silent Night
-
-![](img/Stnikola.jpg){fig-align="center" width="400"}
+`r print_answer(5, 1)`
 
 # QUESTION 2 {.question background-image="img/question-background.png"}
 
-__Two days__ after Christmas Day, on the 27th December 1995 actor Timothée Chalamet arrived into this world. Which folk singer does the boy play in _A Complete Unknown_, released in UK cinemas next month?
-
-![](img/chalamet.jpg){fig-align="center" width="400"}
+`r print_question(5, 2)`
 
 ## QUESTION 2 {.question background-image="img/question-background.png"}
 
-Bob Dylan
-
-![](img/chalamet-2.jpg){fig-align="center" width="400"}
+`r print_answer(5, 2)`
 
 # QUESTION 3 {.question background-image="img/question-background.png"}
 
-*Waiting for Godot* writer Samuel Beckett died **three days** before Christmas Day on 22nd December 1989. While living in France, which former WWF Champion did Beckett used to drive to school in his Citroën convertible?
-
-+--------------------------+----------------------+
-| a\) André the Giant      | ![](img/beckett.jpg) |
-|                          |                      |
-| b\) Hulk Hogan           |                      |
-|                          |                      |
-| c\) The Ultimate Warrior |                      |
-+--------------------------+----------------------+
+`r print_question(5, 3)`
 
 ## QUESTION 3 {.question background-image="img/question-background.png"}
 
-a\) André the Giant
-
-![](img/andre.jpg){fig-align="center" width="400"}
+`r print_answer(5, 3)`
 
 # QUESTION 4 {.question background-image="img/question-background.png"}
 
-Avant-garde rocker Frank Zappa was born __four days__ before Christmas on the 21st December 1940. Which of the following is _not_ the name of one of his children?
-
-![](img/zappa.jpg){fig-align="center" width="400"}
-
-a\) Dweezil; b) Moon Unit; _or_ c) Tiger Lily
+`r print_question(5, 4)`
 
 ## QUESTION 4 {.question background-image="img/question-background.png"}
 
-![](img/zappa-family.jpg){fig-align="center" width="400"}
-
-c\) Tiger Lily
+`r print_answer(5, 4)`
 
 # QUESTION 5 {.question background-image="img/question-background.png"}
 
-He died of a heroin overdose in a Las Vegas hotel room __five days__ after Christmas day on the 30th December 1970, but what is the name of the boxer who Muhammad Ali defeated for his first boxing world title?
-
-![](img/ali.jpg){fig-align="center" width="400"}
+`r print_question(5, 5)`
 
 ## QUESTION 5 {.question background-image="img/question-background.png"}
 
-Sonny Liston
-
-![](img/ali.jpg){fig-align="center" width="400"}
+`r print_answer(5, 5)`
 
 # QUESTION 6 {.question background-image="img/question-background.png"}
 
-__Six days__ after Christmas, on the 31st December 1995, the last edition of which comic strip about a boy and his imaginary tiger was published?
-
-![](img/life-of-pi.png){fig-align="center" width="400"}
+`r print_question(5, 6)`
 
 ## QUESTION 6 {.question background-image="img/question-background.png"}
 
-![](img/calvin.png){fig-align="center" width="400"}
-
-Calvin and Hobbes
+`r print_answer(5, 6)`
 
 # QUESTION 7 {.question background-image="img/question-background.png"}
 
-Who won the 2022 FIFA Men's World Cup final, beating France 4-2 on penalties held just __seven days__ before Christmas on the 18th December?
-
-![](img/qatar-world-cup-emblem.jpg){fig-align="center" width="400"}
+`r print_question(5, 7)`
 
 ## QUESTION 7 {.question background-image="img/question-background.png"}
 
-Argentina
-
-![](img/messi.jfif){fig-align="center" width="400"}
+`r print_answer(5, 7)`
 
 # QUESTION 8 {.question background-image="img/question-background.png"}
 
-On 2 January 2007, __eight days__ after Christmas day, which language became the 23rd Official Language of the EU?
-
-![](img/eu-flag.jpg){fig-align="center" width="400"}
+`r print_question(5, 8)`
 
 ## QUESTION 8 {.question background-image="img/question-background.png"}
 
-Irish
-
-![](img/Irish-Language.png){fig-align="center" width="400"}
+`r print_answer(5, 8)`
 
 # QUESTION 9 {.question background-image="img/question-background.png"}
 
-What is the name of the English illustrator, best known for his work with Roald Dahl, born __nine days__ before Christmas on 16th December 1932?
-
-![](img/willy-wonka.png){fig-align="center" width="400"}
+`r print_question(5, 9)`
 
 ## QUESTION 9 {.question background-image="img/question-background.png"}
 
-Quentin Blake
-
-![](img/quentin-blake.png){fig-align="center" width="400"}
+`r print_answer(5, 9)`
 
 # QUESTION 10 {.question background-image="img/question-background.png"}
 
-__Ten days__ before Christmas Day on 15th December 1993, the Downing Street Declaration was issued by which British Prime Minister _and_ which Irish Taoiseach?
-
-![](img/10_Downing_Street.jpg){fig-align="center" width="400"}
+`r print_question(5, 10)`
 
 ## QUESTION 10 {.question background-image="img/question-background.png"}
 
-John Major and Albert Reynolds
-
-![](img/downing-street-declaration.jpg){fig-align="center" width="400"}
+`r print_answer(5, 10)`
 
 # QUESTION 11 {.question background-image="img/question-background.png"}
 
-What is the name of the singer, actor and US Congressman, who died __eleven days__ after Christmas Day on 5th January 1998 after he skied into a tree?
-
-![](img/United_States_Capitol_west_front_edit2.jpg){fig-align="center" width="400"}
+`r print_question(5, 11)`
 
 ## QUESTION 11 {.question background-image="img/question-background.png"}
 
-Sonny Bono
-
-![](img/Sonny_Bono.jpg){fig-align="center" width="400"}
+`r print_answer(5, 11)`
 
 # QUESTION 12 {.question background-image="img/question-background.png"}
 
-On December 13 1989, baby Taylor Alison Swift was born in West Reading, Pennsylvania... 
-
-![](img/taylor.jpg){fig-align="center" width="400"}
-
-But just **twelve days** later, which Romanian President was executed by firing squad on Christmas Day 1989?  
+`r print_question(5, 12)`
 
 ## QUESTION 12 {.question background-image="img/question-background.png"}
 
-![](img/Nicolae_Ceaușescu.jpg){fig-align="center" width="400"}
-
-Nicolae Ceaușescu
+`r print_answer(5, 12)`
 
 # FINAL SCORES {.scores background-image="img/scores-background.png" data-transition="fade"}
 
