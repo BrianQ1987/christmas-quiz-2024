@@ -20,9 +20,10 @@ source("functions.R")
 
 scores <- read_xlsx("scores.xlsx", sheet = "Scores")
 quiz <- read.csv("quiz.csv", quote = "\'")
+rounds <- read.csv("rounds.csv")
 ```
 
-# CHRISTMAS FOOD & DRINK {.round background-image="img/round-1-background.png"}
+# `r round_name(1)` {.round background-image="img/round-1-background.png"}
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 
@@ -57,11 +58,11 @@ quiz <- read.csv("quiz.csv", quote = "\'")
 
 `r print_question(1, 8)`
 
-# CHRISTMAS FOOD & DRINK - RECAP {.question .recap background-image="img/question-background.png"}
+# `r round_name(1)` - RECAP {.question .recap background-image="img/question-background.png"}
 
 `r recap_round(1)`
 
-# CHRISTMAS FOOD & DRINK {.round background-image="img/round-1-background.png"}
+# `r round_name(1)` {.round background-image="img/round-1-background.png"}
 
 ANSWERS
 
@@ -139,7 +140,7 @@ scores %>%
     set_bold(1:nrow(.), 2)
 ```
 
-# CHRISTMAS MOVIES {.round background-image="img/round-2-background.png"}
+# `r round_name(2)` {.round background-image="img/round-2-background.png"}
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 
@@ -173,7 +174,7 @@ scores %>%
 
 `r print_question(2, 8)`
 
-# CHRISTMAS MOVIES - RECAP {.question background-image="img/question-background.png"}
+# `r round_name(2)` - RECAP {.question background-image="img/question-background.png"}
 
 +---------------------------------------+---------------------------------------+---------------------------------------+---------------------------------------+
 | ![](img/picture_round/question_1.jpg) | ![](img/picture_round/question_2.jpg) | ![](img/picture_round/question_3.jpg) | ![](img/picture_round/question_4.jpg) |
@@ -181,7 +182,7 @@ scores %>%
 | ![](img/picture_round/question_5.jpg) | ![](img/picture_round/question_6.jpg) | ![](img/picture_round/question_7.jpg) | ![](img/picture_round/question_8.jpg) |
 +---------------------------------------+---------------------------------------+---------------------------------------+---------------------------------------+
 
-# CHRISTMAS MOVIES {.round background-image="img/round-2-background.png"}
+# `r round_name(2)` {.round background-image="img/round-2-background.png"}
 
 ANSWERS
 
@@ -260,7 +261,7 @@ scores %>%
     set_bold(1:nrow(.), 2)
 ```
 
-# 2024 {.round background-image="img/round-3-background.png"}
+# `r round_name(3)` {.round background-image="img/round-3-background.png"}
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 `r print_question(3, 1)`
@@ -286,10 +287,10 @@ scores %>%
 # QUESTION 8 {.question background-image="img/question-background.png"}
 `r print_question(3, 8)`
 
-# 2024 - RECAP {.question .recap background-image="img/question-background.png"}
+# `r round_name(3)` - RECAP {.question .recap background-image="img/question-background.png"}
 `r recap_round(3)`
 
-# 2024 {.round background-image="img/round-3-background.png"}
+# `r round_name(3)` {.round background-image="img/round-3-background.png"}
 ANSWERS
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
@@ -352,7 +353,7 @@ scores %>%
 
 ```
 
-# CHRISTMAS NUMBER ONES {.round background-image="img/round-4-background.png"}
+# `r round_name(4)` {.round background-image="img/round-4-background.png"}
 
 # SONG #1 {.question background-image="img/question-background.png"}
 
@@ -386,7 +387,7 @@ scores %>%
 
 `r music_question(8)`
 
-# CHRISTMAS NUMBER ONES - RECAP {.question .recap background-image="img/question-background.png"}
+# `r round_name(4)` - RECAP {.question .recap background-image="img/question-background.png"}
 
 +---------------------------------------------+---------------------------------------------+
 | SONG #1                                     | SONG #5                                     |
@@ -414,7 +415,7 @@ scores %>%
 | </audio>                                    | </audio>                                    |
 +---------------------------------------------+---------------------------------------------+
 
-# CHRISTMAS NUMBER ONES {.round background-image="img/round-4-background.png"}
+# `r round_name(4)` {.round background-image="img/round-4-background.png"}
 
 ANSWERS
 
@@ -493,7 +494,7 @@ scores %>%
     set_bold(1:nrow(.), 2)
 ```
 
-# 12 DAYS OF CHRISTMAS {.round background-image="img/round-5-background.png"}
+# `r round_name(5)` {.round background-image="img/round-5-background.png"}
 
 # QUESTION 1 {.question background-image="img/question-background.png"}
 
@@ -543,11 +544,11 @@ scores %>%
 
 `r print_question(5, 12)`
 
-# 12 DAYS OF CHRISTMAS - RECAP {.question .recap background-image="img/question-background.png"}
+# `r round_name(5)` - RECAP {.question .recap background-image="img/question-background.png"}
 
 `r recap_round(5)`
 
-# 12 DAYS OF CHRISTMAS {.round background-image="img/round-5-background.png"}
+# `r round_name(5)` {.round background-image="img/round-5-background.png"}
 
 ANSWERS
 

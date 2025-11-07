@@ -40,3 +40,10 @@ print_answer <- function (rnd, q) {
 music_question <- function (q) {
   HTML(paste0('<audio src="music/question_', q, '.mp3" controls>'))
 }
+
+round_name <- function (rnd) {
+  rounds %>% 
+    filter(round == rnd) %>% 
+    pull(title) %>% 
+    toupper()
+}
